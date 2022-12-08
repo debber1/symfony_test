@@ -2,3 +2,8 @@
 app_lucky_number:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
+
+min_number:
+    path: /lucky/number/{min}
+    controller: App\Controller\LuckyController::minNumber
+    condition: "params['min'] < 100"

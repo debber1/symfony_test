@@ -15,4 +15,12 @@ class LuckyController extends AbstractController
             'number' => $number,
         ]);
     }
+
+    public function minNumber(int $min): Response
+    {
+        $number = random_int($min, 100);   
+        return $this->render('lucky/number.html.twig',[
+            'number' => $number,
+        ]);
+    }
 }
